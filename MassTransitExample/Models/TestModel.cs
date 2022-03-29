@@ -1,4 +1,4 @@
-namespace MassTransitQueueExample.Models
+namespace MassTransitExample.Models
 {
     /// <summary>
     /// ValueEntered

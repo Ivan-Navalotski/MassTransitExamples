@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using MassTransit;
-using MassTransitQueueExample.Models;
+using MassTransitExample.Models;
 using Microsoft.Extensions.Logging;
 
-namespace MassTransitQueueExample.Consumers
+namespace MassTransitExample.Consumers
 {
     /// <summary>
     /// TestModelConsumer

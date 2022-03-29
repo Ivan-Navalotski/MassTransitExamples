@@ -1,11 +1,11 @@
 using System;
 using System.Threading.Tasks;
 using MassTransit;
-using MassTransitQueueExample.Models;
+using MassTransitExample.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MassTransitQueueExample.Controllers
+namespace MassTransitExample.Controllers
 {
     /// <summary>
     ///  MassTransit
@@ -23,11 +23,11 @@ namespace MassTransitQueueExample.Controllers
         }
 
         /// <summary>
-        /// Create new message
+        /// Create new queue message
         /// </summary>
         /// <returns></returns>
         [HttpGet("[action]")]
-        public async Task<IActionResult> CreateMessage()
+        public async Task<IActionResult> CreateQueueMessage()
         {
             try
             {

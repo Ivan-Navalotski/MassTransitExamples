@@ -10,7 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace MassTransitQueueExample.Configurations
+namespace MassTransitExample.Configurations
 {
     internal static class SwaggerConfig
     {

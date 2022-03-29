@@ -1,9 +1,9 @@
 using System;
 using System.Text.Json.Serialization;
 using MassTransit;
-using MassTransitQueueExample.Configurations;
-using MassTransitQueueExample.Consumers;
-using MassTransitQueueExample.Models;
+using MassTransitExample.Configurations;
+using MassTransitExample.Consumers;
+using MassTransitExample.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MassTransitQueueExample
+namespace MassTransitExample
 {
     /// <summary>
     /// Startup
@@ -66,7 +66,7 @@ namespace MassTransitQueueExample
                     cfg.Host(connectionStr);
                     
                     EndpointConvention.Map<TestModel>(new Uri($"queue:{queueName}"));
-                    
+
                     cfg.UseServiceBusMessageScheduler();
 
 
@@ -76,7 +76,7 @@ namespace MassTransitQueueExample
                         e.ConfigureConsumer<TestModelConsumer>(context);
                     });
 
-
+                    cfg.ConfigureEndpoints(context);
                 });
             });
 
